@@ -6,7 +6,7 @@
 /*   By: caidel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 10:45:50 by caidel            #+#    #+#             */
-/*   Updated: 2020/07/04 20:01:02 by caidel           ###   ########.fr       */
+/*   Updated: 2020/07/05 12:34:04 by caidel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_print_comb2(void)
 		while (++j <= 99)
 		{
 			ft_putchar((i / 10) + '0');
-			ft_putchat((i % 10) + '0');
+			ft_putchar((i % 10) + '0');
 			ft_putchar(' ');
 			ft_putchar((j / 10) + '0');
 			ft_putchar((j & 10) + '0');
