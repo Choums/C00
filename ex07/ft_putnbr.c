@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caidel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/03 10:45:50 by caidel            #+#    #+#             */
-/*   Updated: 2020/07/06 18:09:41 by caidel           ###   ########.fr       */
+/*   Created: 2020/07/06 18:10:44 by caidel            #+#    #+#             */
+/*   Updated: 2020/07/06 19:07:31 by caidel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,27 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+
 }
 
-void	ft_print_comb2(void)
+void	ft_putnbr(int nb)
 {
-	int i;
-	int j;
-
-	i = -1;
-	while (++i <= 98)
+	 long int nbr;
+	 
+	
+	nbr = nb;
+	if (nbr < 0)
 	{
-		j = i;
-		while (++j <= 99)
-		{
-			ft_putchar((i / 10) + '0');
-			ft_putchar((i % 10) + '0');
-			ft_putchar(' ');
-			ft_putchar((j / 10) + '0');
-			ft_putchar((j % 10) + '0');
-			if ((i != 98))
-			{
-				ft_putchar(',');
-				ft_putchar(' ');
-			}
-		}
+		ft_putchar('-');
+		nbr = nbr * (-1);
+	}
+	if (nbr > 9)
+	{
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
+	}
+	else
+	{
+		ft_putchar(nbr + '0');
 	}
 }
